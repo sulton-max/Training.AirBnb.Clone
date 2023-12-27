@@ -12,7 +12,6 @@ using AirBnB.Infrastructure.Common.Verifications.Services;
 using AirBnB.Application.Common.StorageFiles;
 using AirBnB.Domain.Entities;
 using AirBnB.Infrastructure.Common.StorageFiles;
-
 using AirBnB.Persistence.Caching.Brokers;
 using AirBnB.Persistence.DataContexts;
 using AirBnB.Persistence.Repositories;
@@ -118,6 +117,12 @@ public static partial class HostConfiguration
         
         builder.Services
             .AddScoped<IUserRepository, UserRepository>()
+            .AddScoped<IUserService, UserService>();
+
+        builder.Services
+            .AddScoped<IAccountService, AccountService>();
+        
+        builder.Services    
             .AddScoped<IUserService, UserService>()
             .AddScoped<IUserSettingsRepository, UserSettingsRepository>()
             .AddScoped<IUserSettingsService, UserSettingsService>()
