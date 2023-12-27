@@ -12,7 +12,7 @@ public interface ICacheBroker
     /// <param name="key"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    ValueTask<T?> GetAsync<T>(string key);
+    ValueTask<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Attempts to asynchronously retrieve a cached item with the specified key.
@@ -21,7 +21,7 @@ public interface ICacheBroker
     /// <param name="value"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    ValueTask<bool> TryGetAsync<T>(string key, out T? value);
+    ValueTask<bool> TryGetAsync<T>(string key, out T? value, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Asynchronously retrieves a cached item with the specified key, or sets the item if it does not exist.
@@ -31,7 +31,12 @@ public interface ICacheBroker
     /// <param name="cacheEntryOptions"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    ValueTask<T?> GetOrSetAsync<T>(string key, Func<Task<T>> valueFactory, CacheEntryOptions? cacheEntryOptions = default);
+    ValueTask<T?> GetOrSetAsync<T>(
+        string key,
+        Func<Task<T>> valueFactory,
+        CacheEntryOptions? entryOptions = default,
+        CancellationToken cancellationToken = default
+    );
 
     /// <summary>
     /// Asynchronously sets a cached item with the specified key and value.
@@ -41,12 +46,12 @@ public interface ICacheBroker
     /// <param name="entryOptions"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    ValueTask SetAsync<T>(string key, T value, CacheEntryOptions? entryOptions = default);
+    ValueTask SetAsync<T>(string key, T value, CacheEntryOptions? entryOptions = default, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Asynchronously deletes a cached item with the specified key.
     /// </summary>
     /// <param name="key"></param>
     /// <returns></returns>
-    ValueTask DeleteAsync(string key);
+    ValueTask DeleteAsync(string key, CancellationToken cancellationToken = default);
 }

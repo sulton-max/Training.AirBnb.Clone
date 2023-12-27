@@ -37,8 +37,7 @@ public sealed class User : SoftDeletedEntity
     /// Gets or sets the User role type
     /// </summary>
     public Role Role { get; set; }
-
-
+    
     /// <summary>
     /// Gets or sets user activation
     /// </summary>
@@ -48,8 +47,7 @@ public sealed class User : SoftDeletedEntity
     ///Gets or sets user's phone number 
     /// </summary>
     public string PhoneNumber { get; set; } = default!;
-
-
+    
     /// <summary>
     /// User settings property for includes
     /// </summary>

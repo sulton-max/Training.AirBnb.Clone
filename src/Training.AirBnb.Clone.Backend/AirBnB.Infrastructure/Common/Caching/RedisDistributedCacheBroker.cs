@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using AirBnB.Application.Common.Serializers;
 using AirBnB.Infrastructure.Common.Settings;
 using AirBnB.Persistence.Caching.Brokers;
 using AirBnB.Persistence.Caching.Models;
@@ -14,7 +15,11 @@ namespace AirBnB.Infrastructure.Common.Caching;
 /// </summary>
 /// <param name="cacheSettings"></param>
 /// <param name="distributedCache"></param>
-public class RedisDistributedCacheBroker(IOptions<CacheSettings> cacheSettings, IDistributedCache distributedCache) : ICacheBroker
+public class RedisDistributedCacheBroker(
+    IOptions<CacheSettings> cacheSettings,
+    IDistributedCache distributedCache,
+    IJsonSerializationSettingsProvider jsonSerializationSettingsProvider
+) : ICacheBroker
 {
     private readonly DistributedCacheEntryOptions _entryOptions = new()
     {
@@ -22,21 +27,21 @@ public class RedisDistributedCacheBroker(IOptions<CacheSettings> cacheSettings, 
         SlidingExpiration = TimeSpan.FromSeconds(cacheSettings.Value.SlidingExpirationInSeconds)
     };
 
-
-    public async ValueTask<T?> GetAsync<T>(string key)
+    public async ValueTask<T?> GetAsync<T>(string key, CancellationToken cancellationToken = default)
     {
-        var value = await distributedCache.GetAsync(key);
-
-        return value is not null ? JsonConvert.DeserializeObject<T>(Encoding.UTF8.GetString(value)) : default;
+        var value = await distributedCache.GetAsync(key, cancellationToken);
+        return value is not null
+            ? JsonConvert.DeserializeObject<T>(Encoding.UTF8.GetString(value), jsonSerializationSettingsProvider.Get())
+            : default;
     }
 
-    public ValueTask<bool> TryGetAsync<T>(string key, out T? value)
+    public ValueTask<bool> TryGetAsync<T>(string key, out T? value, CancellationToken cancellationToken = default)
     {
         var foundEntry = distributedCache.GetString(key);
 
         if (foundEntry is not null)
         {
-            value = JsonConvert.DeserializeObject<T>(foundEntry);
+            value = JsonConvert.DeserializeObject<T>(foundEntry, jsonSerializationSettingsProvider.Get());
             return ValueTask.FromResult(true);
         }
 
@@ -44,26 +49,36 @@ public class RedisDistributedCacheBroker(IOptions<CacheSettings> cacheSettings, 
         return ValueTask.FromResult(false);
     }
 
-    public async ValueTask<T?> GetOrSetAsync<T>(string key, Func<Task<T>> valueFactory, CacheEntryOptions? cacheEntryOptions = default)
+    public async ValueTask<T?> GetOrSetAsync<T>(
+        string key,
+        Func<Task<T>> valueFactory,
+        CacheEntryOptions? entryOptions = default,
+        CancellationToken cancellationToken = default
+    )
     {
-        var cachedValue = await distributedCache.GetStringAsync(key);
-        if (cachedValue is not null) return JsonConvert.DeserializeObject<T>(cachedValue);
+        var cachedValue = await distributedCache.GetStringAsync(key, cancellationToken);
+        if (cachedValue is not null) return JsonConvert.DeserializeObject<T>(cachedValue, jsonSerializationSettingsProvider.Get());
 
         var value = await valueFactory();
-
-        await SetAsync(key, await valueFactory(), cacheEntryOptions);
+        await SetAsync(key, await valueFactory(), entryOptions, cancellationToken);
 
         return value;
     }
 
-    public async ValueTask SetAsync<T>(string key, T value, CacheEntryOptions? entryOptions = default)
+    public async ValueTask SetAsync<T>(string key, T value, CacheEntryOptions? entryOptions = default, CancellationToken cancellationToken = default)
     {
-        await distributedCache.SetStringAsync(key, JsonConvert.SerializeObject(value), GetCacheEntryOptions(entryOptions));
+        await distributedCache.SetStringAsync(
+            key,
+            JsonConvert.SerializeObject(value, jsonSerializationSettingsProvider.Get()),
+            GetCacheEntryOptions(entryOptions),
+            cancellationToken
+        );
     }
 
-    public ValueTask DeleteAsync(string key)
+    public ValueTask DeleteAsync(string key, CancellationToken cancellationToken = default)
     {
         distributedCache.Remove(key);
+
         return ValueTask.CompletedTask;
     }
 
@@ -73,15 +88,18 @@ public class RedisDistributedCacheBroker(IOptions<CacheSettings> cacheSettings, 
     /// </summary>
     /// <param name="entryOptions">Given cache entry options.</param>
     /// <returns>The distributed cache entry options.</returns>
-    private DistributedCacheEntryOptions GetCacheEntryOptions(CacheEntryOptions? entryOptions)
+    public DistributedCacheEntryOptions GetCacheEntryOptions(CacheEntryOptions? entryOptions)
     {
         if (entryOptions == default || (!entryOptions.AbsoluteExpirationRelativeToNow.HasValue && !entryOptions.SlidingExpiration.HasValue))
             return _entryOptions;
 
         var currentEntryOptions = _entryOptions.DeepClone();
 
-        currentEntryOptions.AbsoluteExpirationRelativeToNow = entryOptions.AbsoluteExpirationRelativeToNow;
-        currentEntryOptions.SlidingExpiration = entryOptions.SlidingExpiration;
+        currentEntryOptions.AbsoluteExpirationRelativeToNow = entryOptions.AbsoluteExpirationRelativeToNow.HasValue
+            ? currentEntryOptions.AbsoluteExpirationRelativeToNow
+            : null;
+
+        currentEntryOptions.SlidingExpiration = entryOptions.SlidingExpiration.HasValue ? currentEntryOptions.SlidingExpiration : null;
 
         return currentEntryOptions;
     }

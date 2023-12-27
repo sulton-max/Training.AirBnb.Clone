@@ -11,13 +11,11 @@ public class Role : IEntity
     /// <summary>
     /// Unique identifier for the Role entity. 
     /// </summary>
-
     public Guid Id { get; set; }
 
     /// <summary>
     /// Represents the type of the role (e.g., Admin, User, etc.).
     /// </summary>
-
     public RoleType Type { get; set; }
 
     /// <summary>
@@ -28,12 +26,10 @@ public class Role : IEntity
     /// <summary>
     /// Timestamp indicating when this role was created. 
     /// </summary>
-
     public DateTime CreatedTime { get; set; }
 
     /// <summary>
     /// Timestamp indicating the last modification time of this role. 
     /// </summary>
-
     public DateTime ModifiedTime { get; set; }
 }

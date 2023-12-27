@@ -27,7 +27,7 @@ public class CacheEntryOptions
     /// </summary>
     /// <param name="absoluteExpirationRelativeToNow"></param>
     /// <param name="slidingExpiration"></param>
-    public CacheEntryOptions(TimeSpan absoluteExpirationRelativeToNow, TimeSpan slidingExpiration)
+    public CacheEntryOptions(TimeSpan? absoluteExpirationRelativeToNow, TimeSpan? slidingExpiration)
     {
         AbsoluteExpirationRelativeToNow = absoluteExpirationRelativeToNow;
         SlidingExpiration = slidingExpiration;
