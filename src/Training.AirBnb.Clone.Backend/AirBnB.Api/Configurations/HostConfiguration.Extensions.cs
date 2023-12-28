@@ -98,7 +98,9 @@ public static partial class HostConfiguration
             
         builder.Services
             .AddScoped<IEmailTemplateService, EmailTemplateService>()
-            .AddScoped<ISmsTemplateService, SmsTemplateService>();
+            .AddScoped<ISmsTemplateService, SmsTemplateService>()
+            .AddScoped<IEmailRenderingService, EmailRenderingService>()
+            .AddScoped<ISmsRenderingService, SmsRenderingService>();
         
         return builder;
     }
