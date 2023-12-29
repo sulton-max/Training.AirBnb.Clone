@@ -1,0 +1,362 @@
+[
+  {
+    "id": "a74480b4-1579-4c95-a71b-3b44c63dce70",
+    "name": "Tropical",
+    "IsSpecialCategory": true,
+    "StorageFileId": "4cd8a4f2-58f2-4f31-bc84-0fb5a16d30d1"
+  },
+  {
+    "id": "050876a7-83da-4bf6-967c-fbf291b2a94f",
+    "name": "Castles",
+    "IsSpecialCategory": false,
+    "StorageFileId": "7a685add-edb0-4b2e-bb39-b5d469a786ba"
+  },
+  {
+    "id": "d8084303-2a85-4e11-9f20-04d085366b78",
+    "name": "Arctic",
+    "IsSpecialCategory": true,
+    "StorageFileId": "9f2a6943-a382-4201-a967-373438891ae2"
+  },
+  {
+    "id": "20e032ed-182f-4d37-9ebb-3d824bd3f4d8",
+    "name": "Luxe",
+    "IsSpecialCategory": true,
+    "StorageFileId": "d9f0cd68-43de-47e9-ab40-aeb540852ba1"
+  },
+  {
+    "id": "499dc35a-e978-4d05-86d8-14605d9a5b97",
+    "name": "Earth homes",
+    "IsSpecialCategory": false,
+    "StorageFileId": "e8763255-0a8a-44d9-ac91-1af3c292183e"
+  },
+  {
+    "id": "ffd8252f-d120-4601-9931-87405b3e8bde",
+    "name": "Amazing views",
+    "IsSpecialCategory": true,
+    "StorageFileId": "bca3a1f3-14c7-4cdf-90a8-a2b687766403"
+  },
+  {
+    "id": "89f5fd3f-72e6-45ea-99c3-b39b1125a78c",
+    "name": "Cycladic homes",
+    "IsSpecialCategory": false,
+    "StorageFileId": "6139f3db-6e41-4ab8-94cc-11aff4d12ab7"
+  },
+  {
+    "id": "3d7ee634-bbfe-461b-a2d5-21e7e428fc3e",
+    "name": "Shepherd's huts",
+    "IsSpecialCategory": false,
+    "StorageFileId": "e743539f-da7d-42f7-85c3-ed28b1a51a33"
+  },
+  {
+    "id": "0b8898ba-9f0e-49f3-b4e2-d07fade4ae4e",
+    "name": "Yurts",
+    "IsSpecialCategory": false,
+    "StorageFileId": "2f153fb9-9583-4e6b-a64a-6ab4e4673a95"
+  },
+  {
+    "id": "5bdab5b8-a91d-46bf-b3d2-d9390292c0f0",
+    "name": "Desert",
+    "IsSpecialCategory": true,
+    "StorageFileId": "a1d9f6c2-11c5-45f1-80cc-e418114b340c"
+  },
+  {
+    "id": "81cec3a8-a16f-483d-9732-0e151bfd0de4",
+    "name": "Casas particulares",
+    "IsSpecialCategory": false,
+    "StorageFileId": "49bf2fad-2873-44da-87b8-9cb675551c03"
+  },
+  {
+    "id": "79912f1b-f762-420b-9eaa-e72eda426e69",
+    "name": "Adapted",
+    "IsSpecialCategory": true,
+    "StorageFileId": "befc6dfd-9387-4ea9-a6cf-89c89373d61b"
+  },
+  {
+    "id": "9a9dc655-5e86-44ed-bab6-025cbfa22c39",
+    "name": "Dammusi",
+    "IsSpecialCategory": false,
+    "StorageFileId": "d8add48c-11e0-47b6-9eae-098ebaa645a2"
+  },
+  {
+    "id": "6768b598-4187-4386-a778-6ed3bcbc8900",
+    "name": "Riads",
+    "IsSpecialCategory": false,
+    "StorageFileId": "fffeda30-83bf-4de4-8673-9a9b0bd87ac3"
+  },
+  {
+    "id": "f5255134-9aea-42f0-b6c4-eb3668111273",
+    "name": "Trulli",
+    "IsSpecialCategory": false,
+    "StorageFileId": "6fb5869b-15fc-49ed-8b0a-3cc33fb7610e"
+  },
+  {
+    "id": "da5fe355-2b2c-4c53-a691-60c886712eb6",
+    "name": "Campers",
+    "IsSpecialCategory": false,
+    "StorageFileId": "c9d3c48d-d09e-4b09-a953-adea4f2e35c0"
+  },
+  {
+    "id": "a9360d6a-992a-4900-8ab3-f61289c1689c",
+    "name": "Islands",
+    "IsSpecialCategory": true,
+    "StorageFileId": "370df7bf-b44a-4622-9ca5-35ade4e15f8d"
+  },
+  {
+    "id": "dd7b9a70-6062-4153-8a76-cd6a892b56d7",
+    "name": "Amazing pools",
+    "IsSpecialCategory": true,
+    "StorageFileId": "f2ee1e9d-fbaa-4d1a-9df0-965ca04df125"
+  },
+  {
+    "id": "5a2a1080-fc38-46c7-9986-1b5815ad7c6b",
+    "name": "OMG!",
+    "IsSpecialCategory": true,
+    "StorageFileId": "e3a4b578-678d-4980-909d-cdcd95c4bba5"
+  },
+  {
+    "id": "7251814f-b87e-49ee-af3d-8353dc3e3ae6",
+    "name": "Surfing",
+    "IsSpecialCategory": true,
+    "StorageFileId": "5fa95546-0843-4215-92b3-ba4e62d30b70"
+  },
+  {
+    "id": "06b2078e-8e47-4b07-a821-c481616506e8",
+    "name": "Design",
+    "IsSpecialCategory": true,
+    "StorageFileId": "9964a514-92c1-4c90-98de-a04e11b1b87f"
+  },
+  {
+    "id": "5dae8fea-5c04-44c2-b573-0cebeac1021b",
+    "name": "Bed & breakfasts",
+    "IsSpecialCategory": false,
+    "StorageFileId": "7d251a87-e64f-4010-bae1-c159d994e870"
+  },
+  {
+    "id": "906919a2-37e3-4dfd-a96a-82dd140457eb",
+    "name": "Caves",
+    "IsSpecialCategory": false,
+    "StorageFileId": "a2232082-4e00-45f7-a920-bd2060ba1a32"
+  },
+  {
+    "id": "901b1f4d-f505-4476-ae5d-b26b102fe71e",
+    "name": "Iconic cities",
+    "IsSpecialCategory": true,
+    "StorageFileId": "52fd71f7-0584-4460-b352-f9258541ff8d"
+  },
+  {
+    "id": "cb9bdd5b-5ed6-44ae-b479-733e6e13398d",
+    "name": "New",
+    "IsSpecialCategory": true,
+    "StorageFileId": "e5c78b8d-05b3-47cc-a133-a3451c070d7e"
+  },
+  {
+    "id": "96bb096e-5a26-474f-8b91-78c009ca5187",
+    "name": "Golfing",
+    "IsSpecialCategory": true,
+    "StorageFileId": "23c531f7-f46b-4c98-ace2-deb49c782d3b"
+  },
+  {
+    "id": "20eb798c-f314-4486-95f1-bc16b691eb47",
+    "name": "Rooms",
+    "IsSpecialCategory": true,
+    "StorageFileId": "98f594c0-1eb9-4621-a6c7-a967e51b0ada"
+  },
+  {
+    "id": "e9850e13-3315-406a-bb4a-41af928ccdda",
+    "name": "Trending",
+    "IsSpecialCategory": true,
+    "StorageFileId": "6926cf14-a01b-4857-90d6-d1dba6dbd2d3"
+  },
+  {
+    "id": "4279d883-38c8-4e51-bc6a-6b3707213ff2",
+    "name": "Camping",
+    "IsSpecialCategory": true,
+    "StorageFileId": "4ec8d6e6-7efe-4936-9e91-9b3cfcfd39cc"
+  },
+  {
+    "id": "fb0a7dea-fdd0-4c52-a7a5-f4f8dd66a024",
+    "name": "Countryside",
+    "IsSpecialCategory": true,
+    "StorageFileId": "9ea92176-cca0-4177-8eae-0f8478a6b7f6"
+  },
+  {
+    "id": "3f48c6b8-8ff4-4350-a66e-99ef0d16226a",
+    "name": "Mansions",
+    "IsSpecialCategory": true,
+    "StorageFileId": "8def826a-02c6-4ba6-95fd-ba04a2ff8633"
+  },
+  {
+    "id": "66806a6a-7e09-4d9e-b16b-f3025e94c395",
+    "name": "Beach",
+    "IsSpecialCategory": true,
+    "StorageFileId": "203e983a-2fb8-42d1-9743-bb6ee7205e94"
+  },
+  {
+    "id": "9c33bfbe-70de-4dae-abc0-a1f2899e2d65",
+    "name": "Tiny homes",
+    "IsSpecialCategory": false,
+    "StorageFileId": "1f1ccb7b-2858-44b9-88ab-fdabffb1a1aa"
+  },
+  {
+    "id": "9463eb20-f975-4b60-b0d0-71bf8c57cb0b",
+    "name": "National parks",
+    "IsSpecialCategory": true,
+    "StorageFileId": "8445c4c1-194e-4dc3-a33a-50f5477891ca"
+  },
+  {
+    "id": "f7f745f9-79d4-4bb0-b4fb-e64f6349b61e",
+    "name": "A-frames",
+    "IsSpecialCategory": true,
+    "StorageFileId": "ab128553-c165-4efd-a600-7e94fe540873"
+  },
+  {
+    "id": "7837a829-11f4-4779-a082-2f0dab51a2fa",
+    "name": "Vineyards",
+    "IsSpecialCategory": true,
+    "StorageFileId": "c2cff26f-6f92-44cc-ae4f-19ee0b6f6d61"
+  },
+  {
+    "id": "50a41bc0-ad37-4c3a-a3b1-c9c7909fdf64",
+    "name": "Cabins",
+    "IsSpecialCategory": false,
+    "StorageFileId": "afce5095-bd13-4c30-a1df-aeb2c3360950"
+  },
+  {
+    "id": "daaaaba9-4352-401f-bd27-25a1315d5166",
+    "name": "Lake",
+    "IsSpecialCategory": true,
+    "StorageFileId": "9ef6f325-17de-4904-859e-3dbe1e108e2d"
+  },
+  {
+    "id": "c556f67b-9980-4d49-8bdc-0f0d952076b8",
+    "name": "Historical homes",
+    "IsSpecialCategory": true,
+    "StorageFileId": "af0dcb89-ff3e-4f6c-b2ff-ee87601a4aec"
+  },
+  {
+    "id": "dcd159b9-2768-4265-bd3c-e4797aca2aaf",
+    "name": "Top of the world",
+    "IsSpecialCategory": true,
+    "StorageFileId": "825e6ad7-e009-4707-8bb6-7d367d55b361"
+  },
+  {
+    "id": "39f55bd0-5d9f-45cb-a7dd-cdc76b455978",
+    "name": "Farms",
+    "IsSpecialCategory": false,
+    "StorageFileId": "69fc93f5-fd5e-4b2c-ad28-86bf4234c8ab"
+  },
+  {
+    "id": "e218fd93-3f1e-44bd-8f66-3bac5fbdce3c",
+    "name": "Hanoks",
+    "IsSpecialCategory": false,
+    "StorageFileId": "84590313-08ec-4b78-838d-d9fc7f044a12"
+  },
+  {
+    "id": "792586ed-2855-4ae1-9988-253a54b54632",
+    "name": "Windmills",
+    "IsSpecialCategory": false,
+    "StorageFileId": "9dace7f0-f68c-450e-afa4-cdc44ba60bd3"
+  },
+  {
+    "id": "3caab064-d2dc-4f64-88bf-0255241b0043",
+    "name": "Skiing",
+    "IsSpecialCategory": true,
+    "StorageFileId": "b36d560b-d574-469b-8ea3-5d504346b6f7"
+  },
+  {
+    "id": "d346ca30-5cf0-49f8-bb45-9cf511a00d41",
+    "name": "Lakefront",
+    "IsSpecialCategory": true,
+    "StorageFileId": "ee8d5fc5-6894-4d8c-9285-c02087f9d5cf"
+  },
+  {
+    "id": "1026b619-68a5-47bd-8078-e351830b024c",
+    "name": "Chef's kitchens",
+    "IsSpecialCategory": true,
+    "StorageFileId": "a46ed074-ee03-434b-8ad5-4341c053524d"
+  },
+  {
+    "id": "fdeb8129-9c6e-495c-9d30-f20c7fa90591",
+    "name": "Treehouses",
+    "IsSpecialCategory": false,
+    "StorageFileId": "ae5d90bc-250a-4d82-b92a-f86d1ba3340e"
+  },
+  {
+    "id": "c6da8915-b564-4163-9446-4d6e0cc09510",
+    "name": "Towers",
+    "IsSpecialCategory": false,
+    "StorageFileId": "5ace33a9-541e-47a5-a786-2c3fcbb8d5a5"
+  },
+  {
+    "id": "16b05d2a-abf1-418b-a23c-166364cde6fe",
+    "name": "Minsus",
+    "IsSpecialCategory": false,
+    "StorageFileId": "3b61932b-4024-46d8-a0b9-e4f13d53f16d"
+  },
+  {
+    "id": "1fdbac78-37cd-4856-8eee-2782ef595714",
+    "name": "Domes",
+    "IsSpecialCategory": false,
+    "StorageFileId": "d638cb27-9962-4813-a010-3f1c89cdfe9f"
+  },
+  {
+    "id": "a7117886-6d24-493f-8ae6-a7e98dc3edf4",
+    "name": "Ryokans",
+    "IsSpecialCategory": false,
+    "StorageFileId": "7a45ee7d-1db4-4603-b6b4-c73d58ecb948"
+  },
+  {
+    "id": "a8ca61ad-e6a0-4ffe-9069-8bcf64b90e95",
+    "name": "Barns",
+    "IsSpecialCategory": false,
+    "StorageFileId": "c196a9d8-7818-4180-8784-19a32e79e021"
+  },
+  {
+    "id": "8f2526e1-acb2-44b1-9482-d79c94c792b6",
+    "name": "Off-the-grid",
+    "IsSpecialCategory": true,
+    "StorageFileId": "40fa48c8-59a1-4ef0-8746-a9f1a29dc56f"
+  },
+  {
+    "id": "351e1b12-10f6-4006-ad97-c1598d893848",
+    "name": "Boats",
+    "IsSpecialCategory": false,
+    "StorageFileId": "a353cf92-1d89-4bf2-91f9-d3eb952ff409"
+  },
+  {
+    "id": "3aafebfa-d1b7-44bf-bc18-143aed7717ce",
+    "name": "Ski-in/out",
+    "IsSpecialCategory": true,
+    "StorageFileId": "9250ea25-cd22-45e0-9d7f-c259929b0e7a"
+  },
+  {
+    "id": "2ca77367-dc4e-412f-8b24-60e16aad60b4",
+    "name": "Houseboats",
+    "IsSpecialCategory": false,
+    "StorageFileId": "9b1f898e-603f-4fe4-916b-c38fc98a66e0"
+  },
+  {
+    "id": "86078ebe-67dc-4ad3-9278-5bb2d69a8ec2",
+    "name": "Play",
+    "IsSpecialCategory": true,
+    "StorageFileId": "0ad35fa1-2bb9-4e6d-9d9d-7f95207e8d99"
+  },
+  {
+    "id": "aa9960e5-bb75-41c7-8b43-c65241790ed3",
+    "name": "Beachfront",
+    "IsSpecialCategory": true,
+    "StorageFileId": "83de95f0-ac22-4dbf-8334-8658eff2b1a4"
+  },
+  {
+    "id": "307ee823-de8e-4a42-8b4c-7febaf35a354",
+    "name": "Containers",
+    "IsSpecialCategory": false,
+    "StorageFileId": "69be8405-8ab9-4ade-9702-9743cc02ecd2"
+  },
+  {
+    "id": "62566124-fa07-4190-8027-eaa0f09b5962",
+    "name": "Creative spaces",
+    "IsSpecialCategory": true,
+    "StorageFileId": "4c44febe-8a27-46f1-baa8-7009613d8a0f"
+  }
+]

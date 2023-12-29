@@ -1,5 +1,7 @@
 ﻿using AirBnB.Api.Models.DTOs;
 using AirBnB.Application.Common.Identity.Services;
+using AirBnB.Application.Listings.Models;
+using AirBnB.Application.Listings.Services;
 using AirBnB.Domain.Common.Query;
 using AirBnB.Domain.Entities;
 using AutoMapper;
@@ -30,6 +32,17 @@ public class ListingsController(IListingService listingService, IMapper mapper) 
         var result = await listingService.GetByIdAsync(listingId, true, cancellationToken);
 
         return result is not null ? Ok(mapper.Map<ListingDto>(result)) : NotFound();
+    }
+
+    [HttpGet("categories")]
+    public async ValueTask<IActionResult> GetListingCategories(
+       [FromServices] IListingCategoryService listingCategoryService,
+       CancellationToken cancellationToken = default)
+    {
+        var result = await listingCategoryService
+            .GetAsync(new ListingCategoryFilter().ToQuerySpecification(), cancellationToken);
+
+        return result.Any() ? Ok(mapper.Map<List<ListingCategoryDto>>(result)) : NoContent();
     }
 
     [HttpPost]

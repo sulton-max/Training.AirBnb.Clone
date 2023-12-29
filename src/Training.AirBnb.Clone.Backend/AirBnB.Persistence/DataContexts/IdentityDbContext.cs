@@ -1,5 +1,4 @@
 using AirBnB.Domain.Entities;
-using AirBnB.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace AirBnB.Persistence.DataContexts;
@@ -16,6 +15,8 @@ public class IdentityDbContext : DbContext
     public DbSet<StorageFile> StorageFiles => Set<StorageFile>();
 
     public DbSet<UserSettings> UserSettings => Set<UserSettings>();
+
+    public DbSet<ListingCategory> ListingCategories => Set<ListingCategory>();
 
     public IdentityDbContext(DbContextOptions<IdentityDbContext> dbContextOptions) : base(dbContextOptions)
     {
