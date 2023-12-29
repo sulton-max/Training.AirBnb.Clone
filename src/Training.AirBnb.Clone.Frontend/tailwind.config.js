@@ -18,7 +18,7 @@ export default {
         bgColorPrimaryDark: '#21252b',
         bgColorSecondaryDark: '#2c313c',
         borderColor: '#eaeaea',
-        borderColorDark: '#404759',
+        borderColorDark: '#dddddd',
 
 
         shadowColor: '#000000',

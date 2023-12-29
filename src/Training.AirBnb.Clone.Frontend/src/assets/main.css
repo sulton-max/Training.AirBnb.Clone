@@ -12,6 +12,10 @@
         @apply bg-textSecondaryDark dark:bg-borderColorDark;
     }
 
+    .theme-text-primary {
+        @apply text-textPrimary dark:text-textPrimaryDark;
+    }
+
     .theme-bg-secondary {
         @apply bg-bgColorSecondary dark:bg-bgColorSecondaryDark;
     }
@@ -22,10 +26,6 @@
 
     .theme-shadow {
         @apply shadow-shadowColor;
-    }
-
-    .theme-text-primary {
-        @apply text-textPrimary dark:text-textPrimaryDark;
     }
 
     .theme-text-secondary {
@@ -66,5 +66,20 @@
 
     .content-padding {
         @apply px-6 md:px-10 xl:px-20
+    }
+}
+
+
+@layer utilities {
+  
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
 }
